@@ -1,6 +1,6 @@
 {
     "name": "TypeScript",
-    "comment":   "TypeScript Syntax by armorik83: version 2.0 beta 1",
+    "comment":   "TypeScript Syntax by armorik83: version 2.0 beta 2",
     "scopeName": "source.ts",
     "fileTypes": ["ts", "str"],
     "patterns": [
@@ -361,7 +361,7 @@
         },
         "class-method-decl": {
             "name": "meta.function.class.ts",
-            "begin": "\\b(?:(declare)\\s+)*(?:((public)|(private)|(static))\\s+)*([a-zA-Z0-9_$][\\w$]*)\\s*(?=\\(|<)",
+            "begin": "\\b(?:(declare)\\s+)*(?:((public)|(private)|(static))\\s+)*([a-zA-Z0-9_$][\\w_$]*)\\s*(?=\\(|<)",
             "beginCaptures": {
                 "1": {"name": "storage.modifier.ts"},
                 "3": {"name": "storage.modifier.ts"},
@@ -430,14 +430,14 @@
             "comment": "{commonProperty: type}",
         },
         "property-common": {
-            "match": "\\b([a-zA-Z0-9_$][\\w$]*)\\b",
+            "match": "\\b([a-zA-Z0-9_$][\\w_$]*)\\b",
             "captures": {
                 "1": {"name": "variable.parameter.name.ts"},
             },
             "comment": "{commonProperty: type}"
         },
         "property-function": {
-            "begin": "\\b([a-zA-Z0-9_$][\\w$]*)(\\()",
+            "begin": "\\b([a-zA-Z0-9_$][\\w_$]*)(\\()",
             "beginCaptures": {
                 "1": {"name": "variable.parameter.name.ts"},
                 "2": {"name": "meta.brace.round.begin.ts"},
@@ -597,7 +597,7 @@
         },
         "function-decl": {
             "name": "meta.function.ts",
-            "begin": "\\b(?:(declare|export)\\s+)*(?:(function)|(static))\\s+([a-zA-Z0-9_$][\\w$]*)\\s*(?=\\(|<)",
+            "begin": "\\b(?:(declare|export)\\s+)*(?:(function)|(static))\\s+([a-zA-Z0-9_$][\\w_$]*)\\s*(?=\\(|<)",
             "beginCaptures": {
                 "1": {"name": "storage.modifier.ts"},
                 "1": {"name": "storage.type.function.ts"},
@@ -650,7 +650,7 @@
         },
         "function-literal-arrow-decl": {
             "name": "meta.function.literal.ts",
-            "begin": "(?:(?<=,|:|\\(|=|\\*/)\\s*(?=\\(.*\\)\\s*=>))",
+            "begin": "(?:(?<=,|:|\\(|=|\\*/)\\s*(?=\\(.*\\)\\s*=>))|(?:(?<=return)\\s*(?=\\(.*\\)\\s*=>))",
             "patterns": [
                 {"include": "#always"},
                 {"include": "#global-function-arrow"},
@@ -665,7 +665,7 @@
 //===============================================================================================================
         "function-call": {
             "name": "meta.function.calling.ts",
-            "begin": "\\b(?:(super)|(throw)|([a-zA-Z0-9_$][\\w$]*))(?=\\(|<)",
+            "begin": "(?:(\\bsuper)|(\\bthrow)|([a-zA-Z0-9_\\$][\\w_$]*))(?=\\(|<)",
             "beginCaptures": {
                 "1": {"name": "storage.type.variable.super.ts"},
                 "2": {"name": "keyword.control.throw.ts"},
@@ -772,7 +772,7 @@
             "end": "(?=;|=|\\bin\\b)|\\n",
         },
         "variable-specify": {
-            "match": "([a-zA-Z0-9_$][\\w$]*)\\s*(?==)",
+            "match": "([a-zA-Z0-9_$][\\w_$]*)\\s*(?==)",
             "captures": {
                 "1": {"name": "variable.parameter.name.ts"},
             },
@@ -795,7 +795,7 @@
 //===============================================================================================================
         "object-bracket": {
             "name": "meta.object.ts",
-            "begin": "(?<==|=\\s|\\(|\\(\\s|:\\s|:|return\\s|,|,\\s|>|>\\s)({)",
+            "begin": "(?<==|=\\s|\\(|\\(\\s|:\\s|:|return\\s|,|,\\s|[\\w_$]>|[\\w_$]>\\s)({)",
             "beginCaptures": {"1": {"name": "meta.brace.curly.begin.ts"}},
             "patterns": [
                 {"include": "#always"},
@@ -861,7 +861,7 @@
         },
 //===============================================================================================================
         "methodcall-accessor": {
-            "begin": "(\\.)(?=[a-zA-Z0-9_$][\\w$]*[\\(<])",
+            "begin": "(\\.)(?=[a-zA-Z0-9_$][\\w_$]*[\\(<])",
             "beginCaptures": {
                 "1": {"name": "meta.delimiter.method.period.ts"},
             },
@@ -875,7 +875,7 @@
             "end": "(?=;|\\.|\\[|\\s|\\)|\\]|}|\\+)",
         },
         "methodcall-notation": {
-            "match": "([a-zA-Z0-9_$][\\w$]*)",
+            "match": "([a-zA-Z0-9_$][\\w_$]*)",
             "captures": {
                 "1": {"name": "meta.function.call.ts"},
             },
@@ -917,7 +917,7 @@
             "comment": "object.prototype"
         },
         "property-notation": {
-            "match": "([a-zA-Z0-9_$][\\w$]*)",
+            "match": "([a-zA-Z0-9_$][\\w_$]*)",
             "captures": {
                 "1": {"name": "variable.other.property.ts"},
             },
