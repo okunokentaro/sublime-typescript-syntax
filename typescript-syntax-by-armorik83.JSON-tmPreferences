@@ -18,6 +18,7 @@
                 {"include": "#use-strict"},
                 {"include": "#comment-set"},
                 {"include": "#string-set"},
+                {"include": "#language-keyword"},
             ]
         },
         "outlines": {
@@ -1115,7 +1116,7 @@
             "match": "\\b(true)\\b",
             "name": "constant.language.boolean.true.ts"
         },
-       "keyword-false": {
+        "keyword-false": {
             "match": "\\b(false)\\b",
             "name": "constant.language.boolean.false.ts "
         },

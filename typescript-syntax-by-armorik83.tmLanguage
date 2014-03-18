@@ -74,6 +74,10 @@
                     <key>include</key>
                     <string>#string-set</string>
                 </dict>
+                <dict>
+                    <key>include</key>
+                    <string>#language-keyword</string>
+                </dict>
             </array>
         </dict>
         <key>brace-round</key>
