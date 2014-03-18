@@ -16,6 +16,7 @@
         "always": {
             "patterns": [
                 {"include": "#use-strict"},
+                {"include": "#special-extension-angularjs"},
                 {"include": "#comment-set"},
                 {"include": "#string-set"},
                 {"include": "#language-keyword"},

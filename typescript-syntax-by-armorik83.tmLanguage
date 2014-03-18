@@ -68,6 +68,10 @@
                 </dict>
                 <dict>
                     <key>include</key>
+                    <string>#special-extension-angularjs</string>
+                </dict>
+                <dict>
+                    <key>include</key>
                     <string>#comment-set</string>
                 </dict>
                 <dict>
