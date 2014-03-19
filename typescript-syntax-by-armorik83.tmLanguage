@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>comment</key>
-    <string>TypeScript Syntax by armorik83: version 2.0 beta 2</string>
+    <string>TypeScript Syntax by armorik83: version 2.0 beta 3</string>
     <key>fileTypes</key>
     <array>
         <string>ts</string>
@@ -1949,10 +1949,6 @@
                 </dict>
                 <dict>
                     <key>include</key>
-                    <string>#property-function</string>
-                </dict>
-                <dict>
-                    <key>include</key>
                     <string>#module-decl-exception</string>
                 </dict>
                 <dict>
@@ -2168,7 +2164,7 @@
                 </dict>
             </dict>
             <key>match</key>
-            <string>(\w+)\s*(?=:)</string>
+            <string>([\w_$]+)\s*(?=:)</string>
         </dict>
         <key>object-value</key>
         <dict>
@@ -3256,7 +3252,7 @@
         <key>use-strict</key>
         <dict>
             <key>match</key>
-            <string>\"use strict\"</string>
+            <string>(\"use strict\")|('use strict')</string>
             <key>name</key>
             <string>storage.modifier.strict.ts</string>
         </dict>
