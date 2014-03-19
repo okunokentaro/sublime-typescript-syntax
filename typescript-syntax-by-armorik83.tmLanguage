@@ -380,7 +380,7 @@
         <key>class-method-decl</key>
         <dict>
             <key>begin</key>
-            <string>\b(?:(declare)\s+)*(?:((public)|(private)|(static))\s+)*([a-zA-Z0-9_$][\w_$]*)\s*(?=\(|&lt;)</string>
+            <string>\b(?:(declare)\s+)*(?:((public)|(private))\s+)*([a-zA-Z0-9_$][\w_$]*)\s*(?=\(|&lt;)</string>
             <key>beginCaptures</key>
             <dict>
                 <key>1</key>
@@ -399,11 +399,6 @@
                     <string>storage.modifier.ts</string>
                 </dict>
                 <key>5</key>
-                <dict>
-                    <key>name</key>
-                    <string>storage.modifier.static.ts</string>
-                </dict>
-                <key>6</key>
                 <dict>
                     <key>name</key>
                     <string>entity.name.function.ts</string>
@@ -458,7 +453,92 @@
                 </dict>
                 <dict>
                     <key>include</key>
+                    <string>#class-method-decl-static</string>
+                </dict>
+                <dict>
+                    <key>include</key>
                     <string>#class-method-decl</string>
+                </dict>
+            </array>
+        </dict>
+        <key>class-method-decl-static</key>
+        <dict>
+            <key>begin</key>
+            <string>\b(?:(declare)\s+)*(?:(?:(?:(public)\s+(static))|(?:(private)\s+(static))|(static))\s+)*([a-zA-Z0-9_$][\w_$]*)\s*(?=\(|&lt;)</string>
+            <key>beginCaptures</key>
+            <dict>
+                <key>1</key>
+                <dict>
+                    <key>name</key>
+                    <string>storage.modifier.ts</string>
+                </dict>
+                <key>2</key>
+                <dict>
+                    <key>name</key>
+                    <string>storage.modifier.ts</string>
+                </dict>
+                <key>3</key>
+                <dict>
+                    <key>name</key>
+                    <string>storage.modifier.static.ts</string>
+                </dict>
+                <key>4</key>
+                <dict>
+                    <key>name</key>
+                    <string>storage.modifier.ts</string>
+                </dict>
+                <key>5</key>
+                <dict>
+                    <key>name</key>
+                    <string>storage.modifier.static.ts</string>
+                </dict>
+                <key>6</key>
+                <dict>
+                    <key>name</key>
+                    <string>storage.modifier.static.ts</string>
+                </dict>
+                <key>7</key>
+                <dict>
+                    <key>name</key>
+                    <string>entity.name.function.ts</string>
+                </dict>
+            </dict>
+            <key>comment</key>
+            <string>public method(args){impl}</string>
+            <key>end</key>
+            <string>(})|(;)</string>
+            <key>endCaptures</key>
+            <dict>
+                <key>1</key>
+                <dict>
+                    <key>name</key>
+                    <string>meta.brace.curly.end.ts</string>
+                </dict>
+                <key>2</key>
+                <dict>
+                    <key>name</key>
+                    <string>punctuation.terminator.statement.ts</string>
+                </dict>
+            </dict>
+            <key>name</key>
+            <string>meta.function.class.ts</string>
+            <key>patterns</key>
+            <array>
+                <dict>
+                    <key>include</key>
+                    <string>#always</string>
+                </dict>
+                <dict>
+                    <key>include</key>
+                    <string>#generic-bracket</string>
+                </dict>
+                <dict>
+                    <key>include</key>
+                    <string>#function-decl-set</string>
+                </dict>
+                <dict>
+                    <key>include</key>
+                    <string>#spilled</string>
                 </dict>
             </array>
         </dict>

@@ -355,18 +355,43 @@
         "class-method-decl-set": {
             "patterns": [
                 {"include": "#class-method-accessor"},
+                {"include": "#class-method-decl-static"},
                 {"include": "#class-method-decl"},
             ],
         },
+        "class-method-decl-static": {
+            "name": "meta.function.class.ts",
+            "begin": "\\b(?:(declare)\\s+)*(?:(?:(?:(public)\\s+(static))|(?:(private)\\s+(static))|(static))\\s+)*([a-zA-Z0-9_$][\\w_$]*)\\s*(?=\\(|<)",
+            "beginCaptures": {
+                "1": {"name": "storage.modifier.ts"},
+                "2": {"name": "storage.modifier.ts"},
+                "3": {"name": "storage.modifier.static.ts"},
+                "4": {"name": "storage.modifier.ts"},
+                "5": {"name": "storage.modifier.static.ts"},
+                "6": {"name": "storage.modifier.static.ts"},
+                "7": {"name": "entity.name.function.ts"},
+            },
+            "patterns": [
+                {"include": "#always"},
+                {"include": "#generic-bracket"},
+                {"include": "#function-decl-set"},
+                {"include": "#spilled"},
+            ],
+            "end": "(})|(;)",
+            "endCaptures": {
+                "1": {"name": "meta.brace.curly.end.ts"},
+                "2": {"name": "punctuation.terminator.statement.ts"}
+            },
+            "comment": "public method(args){impl}"
+        },
         "class-method-decl": {
             "name": "meta.function.class.ts",
-            "begin": "\\b(?:(declare)\\s+)*(?:((public)|(private)|(static))\\s+)*([a-zA-Z0-9_$][\\w_$]*)\\s*(?=\\(|<)",
+            "begin": "\\b(?:(declare)\\s+)*(?:((public)|(private))\\s+)*([a-zA-Z0-9_$][\\w_$]*)\\s*(?=\\(|<)",
             "beginCaptures": {
                 "1": {"name": "storage.modifier.ts"},
                 "3": {"name": "storage.modifier.ts"},
                 "4": {"name": "storage.modifier.ts"},
-                "5": {"name": "storage.modifier.static.ts"},
-                "6": {"name": "entity.name.function.ts"},
+                "5": {"name": "entity.name.function.ts"},
             },
             "patterns": [
                 {"include": "#always"},
