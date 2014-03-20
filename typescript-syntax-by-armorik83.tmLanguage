@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>comment</key>
-    <string>TypeScript Syntax by armorik83: version 2.0 beta 3</string>
+    <string>TypeScript Syntax by armorik83: version 2.0 beta 4 (1)</string>
     <key>fileTypes</key>
     <array>
         <string>ts</string>
@@ -2056,7 +2056,7 @@
         <key>new-decl</key>
         <dict>
             <key>begin</key>
-            <string>\b(new)(?=\w|\s+\w)</string>
+            <string>\b(new)\b(?=\w)</string>
             <key>beginCaptures</key>
             <dict>
                 <key>1</key>
