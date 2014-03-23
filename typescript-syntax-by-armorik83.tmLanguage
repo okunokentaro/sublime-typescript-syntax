@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>comment</key>
-    <string>TypeScript Syntax by armorik83: version 2.0 beta 4 (1)</string>
+    <string>TypeScript Syntax by armorik83: version 2.0 beta 4 (3)</string>
     <key>fileTypes</key>
     <array>
         <string>ts</string>
@@ -1684,6 +1684,49 @@
             <key>name</key>
             <string>keyword.operator.ts</string>
         </dict>
+        <key>keyword-reserved</key>
+        <dict>
+            <key>captures</key>
+            <dict>
+                <key>1</key>
+                <dict>
+                    <key>name</key>
+                    <string>keyword.control.ts</string>
+                </dict>
+                <key>2</key>
+                <dict>
+                    <key>name</key>
+                    <string>keyword.control.ts</string>
+                </dict>
+                <key>3</key>
+                <dict>
+                    <key>name</key>
+                    <string>keyword.control.ts</string>
+                </dict>
+                <key>4</key>
+                <dict>
+                    <key>name</key>
+                    <string>storage.type.ts</string>
+                </dict>
+                <key>5</key>
+                <dict>
+                    <key>name</key>
+                    <string>storage.type.ts</string>
+                </dict>
+                <key>6</key>
+                <dict>
+                    <key>name</key>
+                    <string>keyword.control.ts</string>
+                </dict>
+                <key>7</key>
+                <dict>
+                    <key>name</key>
+                    <string>storage.type.ts</string>
+                </dict>
+            </dict>
+            <key>match</key>
+            <string>\b(?:(debugger)|(implements)|(protected)|(yield)|(let)|(package)|(const))\b</string>
+        </dict>
         <key>keyword-return</key>
         <dict>
             <key>match</key>
@@ -1828,6 +1871,10 @@
                 <dict>
                     <key>include</key>
                     <string>#keyword-void</string>
+                </dict>
+                <dict>
+                    <key>include</key>
+                    <string>#keyword-reserved</string>
                 </dict>
             </array>
         </dict>
@@ -2056,7 +2103,7 @@
         <key>new-decl</key>
         <dict>
             <key>begin</key>
-            <string>\b(new)\b(?=\w)</string>
+            <string>\b(new)\b(?=\s+\w)</string>
             <key>beginCaptures</key>
             <dict>
                 <key>1</key>

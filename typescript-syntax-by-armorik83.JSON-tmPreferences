@@ -1,6 +1,6 @@
 {
     "name": "TypeScript",
-    "comment":   "TypeScript Syntax by armorik83: version 2.0 beta 4 (2)",
+    "comment":   "TypeScript Syntax by armorik83: version 2.0 beta 4 (3)",
     "scopeName": "source.ts",
     "fileTypes": ["ts", "str"],
     "patterns": [
@@ -1131,6 +1131,7 @@
                 {"include": "#keyword-control"},
                 {"include": "#keyword-return"},
                 {"include": "#keyword-void"},
+                {"include": "#keyword-reserved"},
             ],
         },
         "keyword-this": {
@@ -1184,6 +1185,18 @@
         "keyword-void": {
             "match": "\\b(void)\\b",
             "name": "storage.type.ts"
+        },
+        "keyword-reserved": {
+            "match": "\\b(?:(debugger)|(implements)|(protected)|(yield)|(let)|(package)|(const))\\b",
+            "captures": {
+                "1": {"name": "keyword.control.ts"},
+                "2": {"name": "keyword.control.ts"},
+                "3": {"name": "keyword.control.ts"},
+                "4": {"name": "storage.type.ts"},
+                "5": {"name": "storage.type.ts"},
+                "6": {"name": "keyword.control.ts"},
+                "7": {"name": "storage.type.ts"},
+            },
         },
 //===============================================================================================================
         "language-brace": {
