@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>comment</key>
-    <string>TypeScript Syntax by armorik83: version 2.0 beta 4 (3)</string>
+    <string>TypeScript Syntax by armorik83: version 2.0</string>
     <key>fileTypes</key>
     <array>
         <string>ts</string>

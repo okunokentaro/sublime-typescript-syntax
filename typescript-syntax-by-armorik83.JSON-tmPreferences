@@ -1,6 +1,6 @@
 {
     "name": "TypeScript",
-    "comment":   "TypeScript Syntax by armorik83: version 2.0 beta 4 (3)",
+    "comment":   "TypeScript Syntax by armorik83: version 2.0",
     "scopeName": "source.ts",
     "fileTypes": ["ts", "str"],
     "patterns": [
