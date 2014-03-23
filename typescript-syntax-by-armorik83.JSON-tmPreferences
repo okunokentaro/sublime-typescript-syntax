@@ -1,6 +1,6 @@
 {
     "name": "TypeScript",
-    "comment":   "TypeScript Syntax by armorik83: version 2.0 beta 4 (1)",
+    "comment":   "TypeScript Syntax by armorik83: version 2.0 beta 4 (2)",
     "scopeName": "source.ts",
     "fileTypes": ["ts", "str"],
     "patterns": [
@@ -337,7 +337,7 @@
 //===============================================================================================================
         "new-decl": {
             "name": "meta.function.new.ts",
-            "begin": "\\b(new)\\b(?=\\w)",
+            "begin": "\\b(new)\\b(?=\\s+\\w)",
             "beginCaptures": {
                 "1": {"name": "keyword.operator.new.ts"},
             },
