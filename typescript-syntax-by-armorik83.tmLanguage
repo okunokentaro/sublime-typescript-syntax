@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>comment</key>
-    <string>TypeScript Syntax by armorik83: version 2.0.1 (1)</string>
+    <string>TypeScript Syntax by armorik83: version 2.0.2 (2)</string>
     <key>fileTypes</key>
     <array>
         <string>ts</string>
@@ -2145,7 +2145,7 @@
         <key>object-bracket</key>
         <dict>
             <key>begin</key>
-            <string>(?&lt;==|=\s|\(|\(\s|:\s|:|return\s|,|,\s|[\w_$]&gt;|[\w_$]&gt;\s)({)</string>
+            <string>(?&lt;==|\(|:|return\s|,|[\w_$]&gt;)\s*({)</string>
             <key>beginCaptures</key>
             <dict>
                 <key>1</key>
@@ -2247,7 +2247,7 @@
                 </dict>
             </dict>
             <key>comment</key>
-            <string>[{key: value}, {key: value}]</string>
+            <string>({key: value}, {key: value})</string>
             <key>end</key>
             <string>(})</string>
             <key>endCaptures</key>

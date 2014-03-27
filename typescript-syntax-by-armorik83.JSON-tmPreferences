@@ -1,6 +1,6 @@
 {
     "name": "TypeScript",
-    "comment":   "TypeScript Syntax by armorik83: version 2.0.1 (1)",
+    "comment":   "TypeScript Syntax by armorik83: version 2.0.2 (2)",
     "scopeName": "source.ts",
     "fileTypes": ["ts", "str"],
     "patterns": [
@@ -825,7 +825,7 @@
 //===============================================================================================================
         "object-bracket": {
             "name": "meta.object.ts",
-            "begin": "(?<==|=\\s|\\(|\\(\\s|:\\s|:|return\\s|,|,\\s|[\\w_$]>|[\\w_$]>\\s)({)",
+            "begin": "(?<==|\\(|:|return\\s|,|[\\w_$]>)\\s*({)",
             "beginCaptures": {"1": {"name": "meta.brace.curly.begin.ts"}},
             "patterns": [
                 {"include": "#always"},
@@ -849,7 +849,7 @@
             ],
             "end": "(})",
             "endCaptures": {"1": {"name": "meta.brace.curly.end.ts"}},
-            "comment": "[{key: value}, {key: value}]"
+            "comment": "({key: value}, {key: value})"
         },
         "object-bracket-in-brace-square": {
             "name": "meta.object.ts",
