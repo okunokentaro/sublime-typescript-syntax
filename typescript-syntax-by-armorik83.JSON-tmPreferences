@@ -1,6 +1,6 @@
 {
     "name": "TypeScript",
-    "comment":   "TypeScript Syntax by armorik83: version 2.0",
+    "comment":   "TypeScript Syntax by armorik83: version 2.0.1 (1)",
     "scopeName": "source.ts",
     "fileTypes": ["ts", "str"],
     "patterns": [
@@ -447,9 +447,15 @@
             "name": "keyword.operator.new.ts"
         },
         "property-access-modifier": {
-            "match": "\\b(public|private)\\s+",
+            "match": "\\b(?:(public)|(private)|(static)|(public)\\s+(static)|(private)\\s+(static))\\s+",
             "captures": {
                 "1": {"name": "storage.modifier.ts"},
+                "2": {"name": "storage.modifier.ts"},
+                "3": {"name": "storage.modifier.static.ts"},
+                "4": {"name": "storage.modifier.ts"},
+                "5": {"name": "storage.modifier.static.ts"},
+                "6": {"name": "storage.modifier.ts"},
+                "7": {"name": "storage.modifier.static.ts"},
             },
             "comment": "{commonProperty: type}",
         },
