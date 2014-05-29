@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>comment</key>
-    <string>TypeScript Syntax by armorik83: version 2.0.2 (2)</string>
+    <string>TypeScript Syntax by armorik83: version 2.0.3 (3)</string>
     <key>fileTypes</key>
     <array>
         <string>ts</string>
@@ -1986,7 +1986,7 @@
         <key>module-decl</key>
         <dict>
             <key>begin</key>
-            <string>\b(?:(declare)\s+)*(module)\b\s*(\")*([a-zA-Z0-9_?.$][\w?.$]*)(\")*</string>
+            <string>\b(?:(declare|export)\s+)*(module)\b\s*(\")*([a-zA-Z0-9_?.$][\w?.$]*)(\")*</string>
             <key>beginCaptures</key>
             <dict>
                 <key>1</key>

@@ -1,6 +1,6 @@
 {
     "name": "TypeScript",
-    "comment":   "TypeScript Syntax by armorik83: version 2.0.2 (2)",
+    "comment":   "TypeScript Syntax by armorik83: version 2.0.3 (3)",
     "scopeName": "source.ts",
     "fileTypes": ["ts", "str"],
     "patterns": [
@@ -23,7 +23,7 @@
             ]
         },
         "outlines": {
-            "patterns": [        
+            "patterns": [
                 {"include": "#interface-decl"},
                 {"include": "#class-decl"},
                 {"include": "#enum-decl"},
@@ -57,7 +57,7 @@
         },
 //===============================================================================================================
         "comment-set": {
-            "patterns": [        
+            "patterns": [
                 {"include": "#documentation"},
                 {"include": "#comment-block"},
                 {"include": "#comment-line-double"}
@@ -125,7 +125,7 @@
         },
         "module-decl": {
             "name": "meta.module.ts",
-            "begin": "\\b(?:(declare)\\s+)*(module)\\b\\s*(\\\")*([a-zA-Z0-9_?.$][\\w?.$]*)(\\\")*",
+            "begin": "\\b(?:(declare|export)\\s+)*(module)\\b\\s*(\\\")*([a-zA-Z0-9_?.$][\\w?.$]*)(\\\")*",
             "beginCaptures": {
                 "1": {"name": "storage.modifier.ts"},
                 "2": {"name": "storage.type.ts"},
@@ -886,7 +886,7 @@
             "patterns": [
                 {"include": "#methodcall-accessor"},
                 {"include": "#property-bracket"},
-                {"include": "#property-accessor"},  
+                {"include": "#property-accessor"},
             ],
         },
 //===============================================================================================================
@@ -983,7 +983,7 @@
         },
 //===============================================================================================================
         "string-set": {
-            "patterns": [        
+            "patterns": [
                 {"include": "#string-single-quoted"},
                 {"include": "#string-double-quoted"},
                 {"include": "#string-regexp"},
@@ -1036,9 +1036,9 @@
             "match": "\\\\u[0-9a-fA-F]{4}",
             "name": "constant.character.unicode.ts"
         },
-//===============================================================================================================    
+//===============================================================================================================
         "support": {
-            "patterns": [        
+            "patterns": [
                 {"include": "#support-object"},
                 {"include": "#support-class"},
                 {"include": "#special-extension"},
@@ -1054,7 +1054,7 @@
         },
 //===============================================================================================================
         "language": {
-            "patterns": [        
+            "patterns": [
                 {"include": "#language-numbers"},
                 {"include": "#language-operator"},
                 {"include": "#language-keyword"},
