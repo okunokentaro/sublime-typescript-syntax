@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>comment</key>
-    <string>TypeScript Syntax by armorik83: version 2.0.3 (3)</string>
+    <string>TypeScript Syntax by armorik83: version 2.0.4 (4)</string>
     <key>fileTypes</key>
     <array>
         <string>ts</string>
@@ -3028,7 +3028,7 @@
         <key>string-regexp</key>
         <dict>
             <key>begin</key>
-            <string>(?&lt;==|\()\s*(/)</string>
+            <string>(?&lt;==|\(|return)\s*(/)</string>
             <key>beginCaptures</key>
             <dict>
                 <key>1</key>
