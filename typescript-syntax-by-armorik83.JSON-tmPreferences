@@ -1,6 +1,6 @@
 {
     "name": "TypeScript",
-    "comment":   "TypeScript Syntax by armorik83: version 2.0.4 (4)",
+    "comment":   "TypeScript Syntax by armorik83: version 2.0.4 (5)",
     "scopeName": "source.ts",
     "fileTypes": ["ts", "str"],
     "patterns": [
@@ -1045,8 +1045,10 @@
             ]
         },
         "support-object": {
-            "match": "\\b(console|event|document|history|location|window)\\b",
-            "name": "support.object.ts "
+            "match": "(?:(\\$location|\\$window)\\b|\\b(console|event|document|history|location|window)\\b)",
+            "captures": {
+                "2": {"name": "support.object.ts "},
+            },
         },
         "support-class": {
             "match": "(?:)\\b(Date|Math|Number|String)\\b",
