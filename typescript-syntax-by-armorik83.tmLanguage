@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>comment</key>
-    <string>TypeScript Syntax by armorik83: version 2.0.4 (4)</string>
+    <string>TypeScript Syntax by armorik83: version 2.0.5 (6)</string>
     <key>fileTypes</key>
     <array>
         <string>ts</string>
@@ -1173,7 +1173,7 @@
             <key>comment</key>
             <string>var f = (params) =&gt; {impl}</string>
             <key>end</key>
-            <string>(})|(?&lt;=,|;)|(?=\);)|(?=\)\))</string>
+            <string>(})|(?&lt;=,|;)|(?=\);)|(?=\)\))|(?=\)\(\))</string>
             <key>endCaptures</key>
             <dict>
                 <key>1</key>
@@ -3147,10 +3147,16 @@
         </dict>
         <key>support-object</key>
         <dict>
+            <key>captures</key>
+            <dict>
+                <key>2</key>
+                <dict>
+                    <key>name</key>
+                    <string>support.object.ts </string>
+                </dict>
+            </dict>
             <key>match</key>
-            <string>\b(console|event|document|history|location|window)\b</string>
-            <key>name</key>
-            <string>support.object.ts </string>
+            <string>(?:(\$location|\$window)\b|\b(console|event|document|history|location|window)\b)</string>
         </dict>
         <key>ternary</key>
         <dict>
